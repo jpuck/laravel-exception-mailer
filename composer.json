@@ -1,0 +1,21 @@
+{
+    "name": "jpuck/laravel-exception-mailer",
+    "description": "Simple email reporter for exceptions in laravel.",
+    "type": "library",
+    "require": {
+        "php": "^7.0",
+        "laravel/framework": "5.4.* || 5.5.*"
+    },
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Jeff Puckett",
+            "email": "jeff@jeffpuckett.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "jpuck\\laravel\\exception\\mailer\\": "src/"
+        }
+    }
+}
