@@ -6,7 +6,7 @@
         "php": "^7.0",
         "laravel/framework": "5.4.* || 5.5.*"
     },
-    "license": "GPL-3.0+",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Jeff Puckett",
@@ -16,6 +16,13 @@
     "autoload": {
         "psr-4": {
             "jpuck\\laravel\\exception\\mailer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "jpuck\\laravel\\exception\\mailer\\Provider"
+            ]
         }
     }
 }
