@@ -52,7 +52,7 @@ class Handler extends AppHandler
 
     protected function getRecipient() : string
     {
-        return config('exception-mailer.to.address', config('mail.from.address'));
+        return config('exception-mailer.to', config('mail.from.address'));
     }
 
     protected function getSubject() : string
