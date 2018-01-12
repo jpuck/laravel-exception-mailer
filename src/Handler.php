@@ -59,7 +59,7 @@ class Handler
 
     protected function getSubject() : string
     {
-        return 'THROWN '.config('app.name');
+        return config('exception-mailer.subject', 'THROWN '.config('app.name'));
     }
 
     protected function getValidationErrors(ValidationException $exception) : string
