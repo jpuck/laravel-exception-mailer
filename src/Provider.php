@@ -12,9 +12,13 @@ class Provider extends ServiceProvider
         $config = __DIR__.'/../config/exception-mailer.php';
         $this->publishes([
             $config => config_path('exception-mailer.php'),
-        ]);
+        ], 'config');
 
-        $this->loadViewsFrom(__DIR__.'/../views', 'exception-mailer');
+        $views = __DIR__.'/../views';
+        $this->loadViewsFrom($views, 'exception-mailer');
+        $this->publishes([
+            $views => resource_path('views/vendor/exception-mailer'),
+        ], 'views');
     }
 
     public function register()
