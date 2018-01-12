@@ -1,7 +1,6 @@
 <!doctype html><html><body>
 
-<p>There was an exception thrown in {{ config('app.name') }}.</p>
-<p>{{ get_class($exception) }}</p>
+<p>{{ class_basename(get_class($exception)) }} thrown in {{ config('app.name') }}.</p>
 <p>{{ $exception->getMessage() }}</p>
 
 <h2>User</h2>
