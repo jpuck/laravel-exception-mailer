@@ -3,6 +3,7 @@
 namespace jpuck\laravel\exception\mailer;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Debug\ExceptionHandler;
 
 class Provider extends ServiceProvider
 {
@@ -14,5 +15,10 @@ class Provider extends ServiceProvider
         ]);
 
         $this->loadViewsFrom(__DIR__.'/../views', 'exception-mailer');
+    }
+
+    public function register()
+    {
+        $this->app->singleton(ExceptionHandler::class, Handler::class);
     }
 }

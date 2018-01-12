@@ -2,6 +2,7 @@
 
 namespace jpuck\laravel\exception\mailer;
 
+use App\Exceptions\Handler as AppHandler;
 use Exception;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\URL;
@@ -11,9 +12,9 @@ use Illuminate\Support\Facades\Request;
 use App\User;
 use Illuminate\Validation\ValidationException;
 
-class Handler
+class Handler extends AppHandler
 {
-    public function mail(Exception $exception)
+    public function report(Exception $exception)
     {
         if (App::Environment() === 'testing') {
             return;
@@ -45,6 +46,8 @@ class Handler
             $message->to($this->getRecipient());
             $message->subject($this->getSubject());
         });
+
+        parent::report($exception);
     }
 
     protected function dontReport() : array
