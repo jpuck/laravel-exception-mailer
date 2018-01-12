@@ -16,6 +16,7 @@
 @endunless
 
 <h2>Exception</h2>
+<p>{{ date('c') }}</p>
 <pre>{{ $exception }}</pre>
 
 </body></html>
