@@ -20,7 +20,7 @@ class Handler extends AppHandler
             return;
         }
 
-        if (in_array(get_class($exception), $this->dontReport())) {
+        if (in_array(get_class($exception), $this->dontReport ?? [])) {
             return;
         }
 
@@ -48,11 +48,6 @@ class Handler extends AppHandler
         });
 
         parent::report($exception);
-    }
-
-    protected function dontReport() : array
-    {
-        return [];
     }
 
     protected function getRecipient() : string
