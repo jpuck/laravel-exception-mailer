@@ -54,7 +54,7 @@ class Handler
 
     protected function getRecipient() : string
     {
-        return config('mail.from.address');
+        return config('exception-mailer.to.address', config('mail.from.address'));
     }
 
     protected function getSubject() : string
