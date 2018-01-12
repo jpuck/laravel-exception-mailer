@@ -1,10 +1,11 @@
 # Laravel Exception Mailer
 
-Simple email reporter for exceptions in laravel.
+Whenever an uncaught exception is thrown,
+this handler will email details about it and the request.
 
 ## Installation
 
-    composer require laravel-exception-mailer
+    composer require jpuck/laravel-exception-mailer
 
 ## Configuration
 
