@@ -24,6 +24,7 @@ You can filter out exceptions you aren't interested in by filling in the
 ```php
 protected $dontReport = [
     \Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class,
+    \Illuminate\Database\Eloquent\ModelNotFoundException::class,
     \Illuminate\Auth\AuthenticationException::class,
     \Illuminate\Auth\Access\AuthorizationException::class,
     \Illuminate\Session\TokenMismatchException::class,
