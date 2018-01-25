@@ -2,5 +2,5 @@
 
 return [
     'to' => env('EXCEPTION_MAILER_TO_ADDRESS'),
-    'subject' => 'THROWN '.config('app.name').' '.env('EXCEPTION_MAILER_SIGNATURE'),
+    'subject' => 'EXCEPTION THROWN in '.env('APP_NAME').' '.env('EXCEPTION_MAILER_SIGNATURE'),
 ];
