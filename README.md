@@ -7,6 +7,14 @@ this handler will email details about it and the request.
 
     composer require jpuck/laravel-exception-mailer
 
+If you're running Laravel 5.5, then you're done.
+
+For Laravel 5.4, add the service provider to `config/app.php`
+
+```php
+jpuck\laravel\exception\mailer\Provider::class,
+```
+
 ## Configuration
 
 Make sure the app's mail settings are configured properly.
