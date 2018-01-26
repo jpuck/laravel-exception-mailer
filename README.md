@@ -31,6 +31,7 @@ You can filter out exceptions you aren't interested in by filling in the
 
 ```php
 protected $dontReport = [
+    \Illuminate\Foundation\Http\Exceptions\MaintenanceModeException::class,
     \Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class,
     \Illuminate\Database\Eloquent\ModelNotFoundException::class,
     \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException::class,
